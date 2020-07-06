@@ -2,16 +2,23 @@ var express = require('express');
 var bodyParser = require('body-parser');
 // UNCOMMENT THE DATABASE YOU'D LIKE TO USE
 // var items = require('../database-mysql');
-// var items = require('../database-mongo');
+ var db = require('../database-mongo');
+
+let userModel=db.userModel;
 
 var app = express();
+app.use(express.json());
 
 // UNCOMMENT FOR REACT
-// app.use(express.static(__dirname + '/../react-client/dist'));
+ app.use(express.static(__dirname + '/../react-client/dist'));
 
 // UNCOMMENT FOR ANGULAR
 // app.use(express.static(__dirname + '/../angular-client'));
 // app.use(express.static(__dirname + '/../node_modules'));
+
+app.post('/users',(req,res)=>{
+ userModel.s
+})
 
 app.get('/items', function (req, res) {
   items.selectAll(function(err, data) {
