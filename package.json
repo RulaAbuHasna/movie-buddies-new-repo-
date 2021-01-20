@@ -6,8 +6,7 @@
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/index.js"
   },
-  "author": "Rula Abu Hasna",
-  "license": "ISC",
+  "author": "RulaAbuHasna",
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
